@@ -5,9 +5,13 @@
   "main": "generate-report.js",
   "scripts": {
     "report": "node generate-report.js",
-    "docs": "node generate-loan-docs.js"
+    "docs": "node generate-loan-docs.js",
+    "publish": "node publish-docs.js"
   },
   "engines": {
     "node": ">=18"
+  },
+  "dependencies": {
+    "md-to-pdf": "^5.2.4"
   }
 }

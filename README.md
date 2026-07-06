@@ -61,6 +61,11 @@ node generate-report.js --site-fixed-usd 302000 --container-fixed-usd 151000
 - `term-sheet.md`
 - `loan-agreement.md`
 
+`npm run publish` generates docs and publishes to the sibling
+[`octo-loan-docs`](../octo-loan-docs) repository under
+`loan/YYYY-MM-DD/HH-MM-SSZ/` with `markdown/`, `docx/` (Pandoc), and
+`pdf/` (`md-to-pdf` fallback) plus `manifest.json`.
+
 **Tranches offered:** $2.0M and $3.0M only. **$1.0M is excluded** — it does not fund a viable build-out after site and container fixed costs.
 
 ## Files
@@ -71,4 +76,6 @@ node generate-report.js --site-fixed-usd 302000 --container-fixed-usd 151000
   driven by `capex-quotes.json`
 - `loan-calc.js` — pure loan math (amortization, DSCR sizing, flags)
 - `generate-report.js` — CLI entry point, prints the comparison table
+- `publish-docs.js` — export md/docx/pdf to `octo-loan-docs` repo
+- `lib/resolve-pandoc.js` — locates Pandoc on Windows
 - `data/dashboard-log.jsonl` — append-only history of pulled simulation values
