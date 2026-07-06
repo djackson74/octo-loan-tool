@@ -33,9 +33,7 @@ const DEFAULT_OUT = path.join(
   '..',
   'octo-loan-docs',
   'loan',
-  '2026-07-06',
-  '19-53-22Z',
-  'pdf',
+  'package',
 );
 
 function parseArgs(argv) {
@@ -616,8 +614,8 @@ async function main() {
     console.log(`  → ${dest}`);
   }
 
-  // Also save markdown source alongside for traceability
-  const mdDir = path.join(path.dirname(opts.outDir), 'markdown-revised');
+  // Markdown sources stay in loan-tool (package folder is lender PDFs only)
+  const mdDir = path.join(__dirname, 'output', 'revised');
   fs.mkdirSync(mdDir, { recursive: true });
   const mdMap = {
     'cover-letter-revised.md': coverLetter(tiers),
