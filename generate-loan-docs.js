@@ -7,6 +7,7 @@ const path = require('path');
 const { fetchDashboardData } = require('./fetch-dashboard');
 const { solveTargetDscrBalloonStructure, TERM_MONTHS, ANNUAL_RATE, DEFAULT_DSCR_MIN } = require('./loan-calc');
 const { buildCostModel, resolveBuildout, formatCapexSummary, TOTAL_MINERS, QUOTES } = require('./capex-model');
+const GRNBIT = require('./grnbit-brand');
 
 const OUT_DIR = path.join(__dirname, 'output');
 const PRINCIPALS = [2_000_000, 3_000_000];
@@ -57,8 +58,10 @@ function coverLetter(ctx) {
   return `# Cover Letter — Senior Secured Term Loan (Discussion Draft)
 
 **Date:** ${ctx.date}  
-**From:** GrnBit (Cayman) Holdings · Miracle Lake TX Phase 1  
-**To:** Prospective senior lender / participation syndicate  
+**From:** ${GRNBIT.legalName}  
+**Address:** ${GRNBIT.registeredOffice}  
+**Project:** ${GRNBIT.projectSite}  
+**To:** Prospective senior lender / participation syndicate
 **Re:** Indicative ${usd(3_000_000)} senior secured term loan facility — balloon structure  
 **Status:** Non-binding · for discussion with counsel only
 
@@ -66,7 +69,7 @@ function coverLetter(ctx) {
 
 Dear Lender,
 
-GrnBit (Cayman) Holdings ("**Borrower**") requests your consideration of a senior secured term loan to fund energisation and OCTO AI validation at **Miracle Lake, Karnes County, Texas — Phase 1**.
+${GRNBIT.legalName} ("**Borrower**") requests your consideration of a senior secured term loan to fund energisation and OCTO AI validation at **${GRNBIT.projectSite}** (power: ${GRNBIT.powerPartner}).
 
 ### Why this letter
 
@@ -107,20 +110,20 @@ Minimum lender participation: **${usd(250_000)}**. Multiple lenders may particip
 - CAPEX build-out sizing uses **locked vendor quotes** (AntSpace/Bitmain hardware + Xplor interconnect) in \`capex-quotes.json\`, reconciled to **$3.02M** Phase 1 total.
 - This package is **not an offer of securities** and **not legal or tax advice**.
 
-We welcome a diligence call and site scoping session. Contact: **info@grnbit.digital**.
+We welcome a diligence call and site scoping session. Contact: **${GRNBIT.contactEmail}** (debt / lender inquiries: **${GRNBIT.contactEmailDebt}**).
 
 Respectfully,
 
-**GrnBit (Cayman) Holdings**  
-Miracle Lake TX Phase 1 · OCTO AI Validation Site
+${GRNBIT.signature()}
 `;
 }
 
 function termSheet(ctx) {
   return `# Indicative Term Sheet — Senior Secured Term Loan (Balloon)
 
-**Borrower:** GrnBit (Cayman) Holdings  
-**Project:** Miracle Lake TX Phase 1 — OCTO AI industrial optimization validation site  
+**Borrower:** ${GRNBIT.legalName}  
+**Registered office:** ${GRNBIT.registeredOffice}  
+**Project:** ${GRNBIT.projectSite} — OCTO AI industrial optimization validation site
 **Date:** ${ctx.date}  
 **Status:** Non-binding · discussion draft only · subject to counsel and credit approval
 
@@ -164,7 +167,7 @@ ${ctx.tierBlocks}
 - First-priority security interest in Miracle Lake Phase 1 equipment (containers, miners, PDUs, cooling).  
 - Assignment of power purchase / interconnect agreements where assignable.  
 - OCTO field-of-use license collateral assignment (scope per definitive docs).  
-- Corporate guarantee of GrnBit (Cayman) Holdings.  
+- Corporate guarantee of ${GRNBIT.legalName}.
 - Senior to equity, SAFE, and convertible notes.
 
 ## 5. Covenants (indicative)
@@ -206,7 +209,8 @@ Not an offer of securities. Not legal, tax, or investment advice. OCTO metrics a
 
 ---
 
-**Contact:** info@grnbit.digital · https://grnbit.digital
+**Contact:** ${GRNBIT.contactLine()}  
+**Debt / IR:** ${GRNBIT.contactEmailDebt}
 `;
 }
 
@@ -216,7 +220,8 @@ function loanAgreement(ctx) {
 **WARNING:** Form only. GrnBit counsel must review before execution. Non-binding template.
 
 **Date:** ${ctx.date}  
-**Parties:** GrnBit (Cayman) Holdings ("Borrower") · [Lender Name] ("Lender")
+**Parties:** ${GRNBIT.legalName} ("Borrower") · [Lender Name] ("Lender")  
+**Borrower address:** ${GRNBIT.registeredOffice}
 
 ---
 

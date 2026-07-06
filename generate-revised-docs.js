@@ -6,6 +6,7 @@ const fs = require('fs');
 const path = require('path');
 const { solveTargetDscrBalloonStructure, TERM_MONTHS, ANNUAL_RATE, DEFAULT_DSCR_MIN } = require('./loan-calc');
 const { buildCostModel, resolveBuildout, formatCapexSummary, TOTAL_MINERS, QUOTES } = require('./capex-model');
+const GRNBIT = require('./grnbit-brand');
 
 const SIM_TS = '2026-07-06T19:53:22.251Z';
 const DOC_DATE = '2026-07-06';
@@ -101,8 +102,10 @@ function coverLetter(tiers) {
   return `# Cover Letter — Senior Secured Term Loan
 
 **Date:** ${DOC_DATE}  
-**From:** GrnBit (Cayman) Holdings · Miracle Lake TX Phase 1  
-**To:** Prospective senior lender / participation syndicate  
+**From:** ${GRNBIT.legalName}  
+**Address:** ${GRNBIT.registeredOffice}  
+**Project:** ${GRNBIT.projectSite}  
+**To:** Prospective senior lender / participation syndicate
 **Re:** Indicative ${usd(3_000_000)} senior secured term loan facility — balloon structure  
 **Status:** Non-binding · for discussion with counsel only
 
@@ -110,7 +113,7 @@ function coverLetter(tiers) {
 
 Dear Lender,
 
-GrnBit (Cayman) Holdings ("**Borrower**") requests your consideration of a senior secured term loan to fund energisation and OCTO AI validation at **Miracle Lake, Karnes County, Texas — Phase 1**.
+${GRNBIT.legalName} ("**Borrower**") requests your consideration of a senior secured term loan to fund energisation and OCTO AI validation at **${GRNBIT.projectSite}** (power: ${GRNBIT.powerPartner}).
 
 ### Substantiation — simulation source and traceability
 
@@ -164,12 +167,11 @@ Minimum lender participation: **${usd(250_000)}**. Multiple lenders may particip
 - CAPEX build-out sizing uses **locked vendor quotes** (AntSpace/Bitmain hardware + Xplor interconnect) in \`capex-quotes.json\`, reconciled to **$3.02M** Phase 1 total.
 - This package is **not an offer of securities** and **not legal or tax advice**.
 
-We welcome a diligence call and site scoping session. Contact: **info@grnbit.digital**.
+We welcome a diligence call and site scoping session. Contact: **${GRNBIT.contactEmail}** (debt / lender inquiries: **${GRNBIT.contactEmailDebt}**).
 
 Respectfully,
 
-**GrnBit (Cayman) Holdings**  
-Miracle Lake TX Phase 1 · OCTO AI Validation Site
+${GRNBIT.signature()}
 
 ---
 
@@ -189,8 +191,9 @@ function termSheet(tiers) {
 
   return `# Indicative Term Sheet — Senior Secured Term Loan (Balloon)
 
-**Borrower:** GrnBit (Cayman) Holdings  
-**Project:** Miracle Lake TX Phase 1 — OCTO AI industrial optimization validation site  
+**Borrower:** ${GRNBIT.legalName}  
+**Registered office:** ${GRNBIT.registeredOffice}  
+**Project:** ${GRNBIT.projectSite} — OCTO AI industrial optimization validation site
 **Date:** ${DOC_DATE}  
 **Status:** Non-binding · discussion draft only · subject to counsel and credit approval
 
@@ -236,10 +239,10 @@ ${tierBlocks}
 
 ## 4. Security
 
-- First-priority security interest in Miracle Lake Phase 1 equipment (containers, miners, PDUs, cooling).  
+- First-priority security interest in ${GRNBIT.projectSite} equipment (containers, miners, PDUs, cooling).
 - Assignment of power purchase / interconnect agreements where assignable.  
 - OCTO field-of-use license collateral assignment (scope per definitive docs).  
-- Corporate guarantee of GrnBit (Cayman) Holdings.  
+- Corporate guarantee of ${GRNBIT.legalName}.
 - Senior to equity, SAFE, and convertible notes.
 
 ## 5. Covenants (indicative)
@@ -296,7 +299,8 @@ Not an offer of securities. Not legal, tax, or investment advice. OCTO metrics a
 
 ---
 
-**Contact:** info@grnbit.digital · https://grnbit.digital
+**Contact:** ${GRNBIT.contactLine()}  
+**Debt / IR:** ${GRNBIT.contactEmailDebt}
 `;
 }
 
@@ -308,7 +312,8 @@ function loanAgreement(tiers) {
 **WARNING:** Form only. GrnBit counsel must review before execution. Non-binding template.
 
 **Date:** ${DOC_DATE}  
-**Parties:** GrnBit (Cayman) Holdings ("Borrower") · [Lender Name] ("Lender")
+**Parties:** ${GRNBIT.legalName} ("Borrower") · [Lender Name] ("Lender")  
+**Borrower address:** ${GRNBIT.registeredOffice}
 
 ---
 
@@ -328,7 +333,7 @@ Key definitions include: **Business Day**, **DSCR**, **Drawdown Date**, **Facili
 
 2.3 **Excluded tranche.** No **${usd(1_000_000)}** loans — insufficient build-out coverage.
 
-2.4 **Use of proceeds.** Phase 1 Miracle Lake TX: site work, containers, miners, interconnect, OCTO deployment, reserves.
+2.4 **Use of proceeds.** ${GRNBIT.projectSite}: site work, containers, miners, interconnect, OCTO deployment, reserves (${GRNBIT.powerPartner}).
 
 ## Article 3 — Interest and fees
 
@@ -365,7 +370,7 @@ Financial: **Minimum DSCR ${DSCR}x** (post-IO, quarterly); debt service reserve 
 
 ## Article 7 — Security
 
-Grant of security interest in Project Assets; fixture filing in Karnes County, TX; account control agreements; assignment of material project contracts.
+Grant of security interest in Project Assets at ${GRNBIT.projectSite}; fixture filing in Karnes County, Texas; account control agreements; assignment of material project contracts (including ${GRNBIT.powerPartner} interconnect where assignable).
 
 ## Article 8 — Events of default
 
@@ -375,7 +380,9 @@ Remedies: acceleration, foreclosure on collateral, appointment of receiver (if p
 
 ## Article 9 — Miscellaneous
 
-Governing law: ${negotiable('[Cayman / Texas — counsel to confirm]')}. Forum: ${negotiable('[●]')}. Notices. Amendments in writing. counterparts / e-sign.
+Governing law: ${negotiable('[Cayman / Texas — counsel to confirm]')}. Forum: ${negotiable('[●]')}.  
+**Notices (Borrower):** ${GRNBIT.legalName}, ${GRNBIT.registeredOffice}, attention: ${GRNBIT.contactEmailDebt}.  
+Amendments in writing. Counterparts / e-sign.
 
 ---
 
@@ -413,7 +420,7 @@ See enclosed **Schedule D — Key Risks** document for risks specific to this fa
 function simulationAssumptions() {
   return `# Simulation Assumptions Schedule
 
-**Project:** Miracle Lake TX Phase 1  
+**Project:** ${GRNBIT.projectSite}
 **Model:** OCTO-optimized digital-twin simulation  
 **Timestamp:** ${SIM_TS}  
 **Dashboard:** ${DASHBOARD_URL}  
@@ -425,7 +432,7 @@ function simulationAssumptions() {
 
 | Assumption | Value | Source |
 |------------|-------|--------|
-| Site | Miracle Lake, Karnes County, TX Phase 1 | Project definition |
+| Site | ${GRNBIT.projectSite} | Project definition (${GRNBIT.powerPartner}) |
 | Containers | 3 × Bitmain ANTSPACE HK3 V6 (70 miner slots each) | Site config |
 | Miners | 210 × Antminer S23 Hyd 580TH | asicminervalue.com (retrieved 2026-07-05) |
 | Nominal hashrate | 121.8 PH/s | 210 × 580 TH |
@@ -473,7 +480,7 @@ The **full OCTO-optimized digital-twin economics model** — including network d
 
 ---
 
-**Contact:** info@grnbit.digital
+**Contact:** ${GRNBIT.contactLine()}
 `;
 }
 
@@ -481,8 +488,8 @@ function scheduleD() {
   return `# Schedule D — Key Risks
 
 **Facility:** Senior secured term loan — Miracle Lake TX Phase 1  
-**Borrower:** GrnBit (Cayman) Holdings  
-**Date:** ${DOC_DATE}  
+**Borrower:** ${GRNBIT.legalName} · ${GRNBIT.registeredOffice}  
+**Date:** ${DOC_DATE}
 **Related documents:** Term Sheet · Form Loan Agreement
 
 ---
@@ -541,8 +548,8 @@ function changesMemo() {
 
 ---
 
-**Prepared by:** GrnBit (Cayman) Holdings · Miracle Lake TX Phase 1  
-**Contact:** info@grnbit.digital
+**Prepared by:** ${GRNBIT.legalName} · ${GRNBIT.registeredOffice}  
+**Contact:** ${GRNBIT.contactLine()}
 `;
 }
 
