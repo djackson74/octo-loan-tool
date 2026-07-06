@@ -66,6 +66,11 @@ node generate-report.js --site-fixed-usd 302000 --container-fixed-usd 151000
 `loan/YYYY-MM-DD/HH-MM-SSZ/` with `markdown/`, `docx/` (Pandoc), and
 `pdf/` (`md-to-pdf` fallback) plus `manifest.json`.
 
+`npm run revised` generates the **CHRITIC-revised** lender package (baseline
+definition, Simulation Assumptions Schedule, Schedule D risks, logic chains,
+negotiable placeholders) as PDFs into the latest publish folder's `pdf/`
+subdirectory. Markdown sources land in `markdown-revised/`.
+
 **Tranches offered:** $2.0M and $3.0M only. **$1.0M is excluded** — it does not fund a viable build-out after site and container fixed costs.
 
 ## Files
@@ -77,5 +82,6 @@ node generate-report.js --site-fixed-usd 302000 --container-fixed-usd 151000
 - `loan-calc.js` — pure loan math (amortization, DSCR sizing, flags)
 - `generate-report.js` — CLI entry point, prints the comparison table
 - `publish-docs.js` — export md/docx/pdf to `octo-loan-docs` repo
+- `generate-revised-docs.js` — CHRITIC-revised lender PDFs (Verified-ready)
 - `lib/resolve-pandoc.js` — locates Pandoc on Windows
 - `data/dashboard-log.jsonl` — append-only history of pulled simulation values

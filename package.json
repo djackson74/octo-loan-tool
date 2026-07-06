@@ -6,6 +6,7 @@
   "scripts": {
     "report": "node generate-report.js",
     "docs": "node generate-loan-docs.js",
+    "revised": "node generate-revised-docs.js",
     "publish": "node publish-docs.js"
   },
   "engines": {

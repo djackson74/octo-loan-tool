@@ -38,7 +38,7 @@ Key definitions include: **Business Day**, **DSCR**, **Drawdown Date**, **Facili
 
 **Maturity (month 48):** payment in full of **Balloon Payment** (remaining principal).
 
-See Schedule A for tranche-specific dollar amounts derived from simulation as of 2026-07-06T19:52:20.363Z.
+See Schedule A for tranche-specific dollar amounts derived from simulation as of 2026-07-06T19:59:10.334Z.
 
 ### $2,000,000 tranche
 
@@ -91,7 +91,7 @@ Governing law: [Cayman / Texas — counsel to confirm]. Forum: [●]. Notices. A
 
 ---
 
-## Schedule A — Payment amounts (simulation-sized · 2026-07-06T19:52:20.363Z)
+## Schedule A — Payment amounts (simulation-sized · 2026-07-06T19:59:10.334Z)
 
 ### $2,000,000 tranche
 

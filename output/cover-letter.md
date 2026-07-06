@@ -14,7 +14,7 @@ GrnBit (Cayman) Holdings ("**Borrower**") requests your consideration of a senio
 
 ### Why this letter
 
-We are not asking you to rely on a static deck. Coverage metrics in the enclosed term sheet are sized from the **live OCTO AI dashboard simulation** pulled 2026-07-06T19:52:20.363Z:
+We are not asking you to rely on a static deck. Coverage metrics in the enclosed term sheet are sized from the **live OCTO AI dashboard simulation** pulled 2026-07-06T19:59:10.334Z:
 
 - OCTO daily profit (optimized twin): **$2,387/day**
 - OCTO edge vs industry-typical baseline: **+22.6%**
