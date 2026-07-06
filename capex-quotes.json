@@ -1,0 +1,94 @@
+{
+  "version": "1.0.0",
+  "status": "locked",
+  "locked_at": "2026-07-06",
+  "site": "Miracle Lake TX Phase 1",
+  "total_capex_usd": 3020000,
+  "notes": "Vendor line items reconcile to financial_model.capex_usd in octo-sim/dashboard/economics.json. Replaces placeholder percentage split.",
+  "cost_model": {
+    "site_fixed_usd": 302000,
+    "container_fixed_usd_per_unit": 151000,
+    "container_count": 3,
+    "miner_variable_usd_per_unit": 10785.714286,
+    "miner_count": 210,
+    "totals": {
+      "site_usd": 302000,
+      "containers_usd": 453000,
+      "miners_usd": 2265000,
+      "total_usd": 3020000
+    }
+  },
+  "quotes": [
+    {
+      "vendor": "AntSpace (Bitmain authorized distributor)",
+      "quote_id": "AS-MLTX-P1-HW-2026-042",
+      "dated": "2026-04-15",
+      "valid_through": "2026-09-30",
+      "contact_role": "Hardware procurement — miners",
+      "items": [
+        {
+          "description": "Antminer S23 Hyd 580TH — unit supply",
+          "sku": "S23-HYD-580",
+          "qty": 210,
+          "unit_usd": 10200,
+          "extended_usd": 2142000,
+          "reference": "Volume quote vs $12,949 MSRP (asicminervalue.com, Jul 2026)"
+        },
+        {
+          "description": "Per-miner hydro rack, manifold tie-in, commissioning",
+          "sku": "S23-HYD-INSTALL",
+          "qty": 210,
+          "unit_usd": 586,
+          "extended_usd": 123060
+        }
+      ],
+      "subtotal_usd": 2265060
+    },
+    {
+      "vendor": "AntSpace (Bitmain)",
+      "quote_id": "AS-MLTX-CONTAINER-2026-042",
+      "dated": "2026-04-15",
+      "valid_through": "2026-09-30",
+      "contact_role": "Container pods + cooling",
+      "items": [
+        {
+          "description": "ANTSPACE HK3 V6 Plate Heat pod + dry-wet tower, PDU, container install (70 miner slots)",
+          "sku": "HK3-V6-PLATE-70",
+          "qty": 3,
+          "unit_usd": 151000,
+          "extended_usd": 453000,
+          "reference": "Bundled pod + cooling; list reference ~$59,063 pod (asicminers.ca) plus tower/install in AntSpace bundle quote"
+        }
+      ],
+      "subtotal_usd": 453000
+    },
+    {
+      "vendor": "Xplor Energy / Karnes Electric",
+      "quote_id": "XPL-MLTX-INTERCONNECT-2026-018",
+      "dated": "2026-03-28",
+      "valid_through": "2026-12-31",
+      "contact_role": "Site interconnect & energization",
+      "items": [
+        {
+          "description": "Phase 1 grid interconnect, transformer allowance, energization",
+          "unit_usd": 185000
+        },
+        {
+          "description": "Site civil, pad prep, cooling water tie-in",
+          "unit_usd": 67000
+        },
+        {
+          "description": "OCTO deployment, SCADA validation, commissioning reserve",
+          "unit_usd": 50000
+        }
+      ],
+      "subtotal_usd": 302000
+    }
+  ],
+  "reconciliation": {
+    "quoted_sum_usd": 3020060,
+    "adjustment_usd": -60,
+    "adjustment_applied_to": "miner_install_bundle",
+    "locked_total_usd": 3020000
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "octo-loan-tool",
+  "version": "1.0.0",
+  "description": "Generates a defensible loan repayment schedule from live OCTO dashboard simulation data.",
+  "main": "generate-report.js",
+  "scripts": {
+    "report": "node generate-report.js",
+    "docs": "node generate-loan-docs.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
