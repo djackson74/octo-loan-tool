@@ -591,7 +591,10 @@ async function writePdf(mdToPdf, md, destPdf) {
 
 async function main() {
   const opts = parseArgs(process.argv.slice(2));
-  fs.mkdirSync(opts.outDir, { recursive: true });
+  const docsDir = path.join(opts.outDir, 'documents');
+  const refDir = path.join(opts.outDir, 'reference');
+  fs.mkdirSync(docsDir, { recursive: true });
+  fs.mkdirSync(refDir, { recursive: true });
 
   const tiers = buildTiers();
   const docs = [
@@ -612,7 +615,7 @@ async function main() {
 
   const written = [];
   for (const { file, body } of docs) {
-    const dest = path.join(opts.outDir, file);
+    const dest = path.join(docsDir, file);
     console.log(`Generating ${file}...`);
     await writePdf(mdToPdf, body, dest);
     if (!fs.existsSync(dest)) throw new Error(`Failed to write ${dest}`);
@@ -635,8 +638,41 @@ async function main() {
     fs.writeFileSync(path.join(mdDir, name), body, 'utf8');
   }
 
-  console.log('\nDone. Files written:');
+  const quotesSrc = path.join(__dirname, 'capex-quotes.json');
+  const quotesDest = path.join(refDir, 'capex-quotes.json');
+  if (fs.existsSync(quotesSrc)) fs.copyFileSync(quotesSrc, quotesDest);
+
+  const manifest = {
+    package: 'loan',
+    stage: 'Revised',
+    doc_date: DOC_DATE,
+    simulation_timestamp: SIM_TS,
+    revised_at: new Date().toISOString(),
+    source_tool: 'octo-loan-tool',
+    source_repo: 'https://github.com/djackson74/octo-loan-tool',
+    layout: { documents: 'loan/package/documents/', reference: 'loan/package/reference/' },
+    dashboard: {
+      url: DASHBOARD_URL,
+      octoDailyProfitUsd: FROZEN.dailyProfit,
+      octoEdgeVsBaselinePct: FROZEN.edgePct,
+      btcPriceUsd: FROZEN.btc,
+      validationStatus: FROZEN.validation,
+    },
+    files: {
+      'cover-letter': `documents/Cover_Letter_Revised_${DOC_DATE}.pdf`,
+      'term-sheet': `documents/Term_Sheet_Revised_${DOC_DATE}.pdf`,
+      'loan-agreement': `documents/Loan_Agreement_Form_Revised_${DOC_DATE}.pdf`,
+      'simulation-assumptions': 'documents/Simulation_Assumptions_Schedule.pdf',
+      'schedule-d-risks': 'documents/Key_Risks_Schedule_D.pdf',
+      'changes-memo': 'documents/Changes_Memo.pdf',
+      'capex-quotes': 'reference/capex-quotes.json',
+    },
+  };
+  fs.writeFileSync(path.join(refDir, 'manifest.json'), JSON.stringify(manifest, null, 2) + '\n', 'utf8');
+
+  console.log('\nDone. Lender PDFs (select-all copy):');
   for (const p of written) console.log(p);
+  console.log(`Reference: ${refDir}`);
 }
 
 main().catch((err) => {
