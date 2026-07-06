@@ -167,7 +167,7 @@ Minimum lender participation: **${usd(250_000)}**. Multiple lenders may particip
 - CAPEX build-out sizing uses **locked vendor quotes** (AntSpace/Bitmain hardware + Xplor interconnect) in \`capex-quotes.json\`, reconciled to **$3.02M** Phase 1 total.
 - This package is **not an offer of securities** and **not legal or tax advice**.
 
-We welcome a diligence call and site scoping session. Contact: **${GRNBIT.contactEmail}** (debt / lender inquiries: **${GRNBIT.contactEmailDebt}**).
+We welcome a diligence call and site scoping session. Contact: **${GRNBIT.contactEmail}**.
 
 Respectfully,
 
@@ -299,8 +299,7 @@ Not an offer of securities. Not legal, tax, or investment advice. OCTO metrics a
 
 ---
 
-**Contact:** ${GRNBIT.contactLine()}  
-**Debt / IR:** ${GRNBIT.contactEmailDebt}
+**Contact:** ${GRNBIT.contactLine()}
 `;
 }
 
@@ -381,7 +380,7 @@ Remedies: acceleration, foreclosure on collateral, appointment of receiver (if p
 ## Article 9 — Miscellaneous
 
 Governing law: ${negotiable('[Cayman / Texas — counsel to confirm]')}. Forum: ${negotiable('[●]')}.  
-**Notices (Borrower):** ${GRNBIT.legalName}, ${GRNBIT.registeredOffice}, attention: ${GRNBIT.contactEmailDebt}.  
+**Notices (Borrower):** ${GRNBIT.legalName}, ${GRNBIT.registeredOffice}, attention: ${GRNBIT.contactEmail}.
 Amendments in writing. Counterparts / e-sign.
 
 ---

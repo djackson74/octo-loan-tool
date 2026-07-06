@@ -6,8 +6,7 @@ module.exports = {
   projectSite: 'Miracle Lake, Karnes County, South Texas — Phase 1',
   projectCounty: 'Karnes County, South Texas',
   powerPartner: 'Xplor Energy / Karnes Electric',
-  contactEmail: 'investors@grnbit.digital',
-  contactEmailDebt: 'info@grnbit.digital',
+  contactEmail: 'djackson@grnbit.digital',
   website: 'https://grnbit.digital',
   regulator: 'CIMA (Cayman Islands Monetary Authority)',
   letterhead() {
