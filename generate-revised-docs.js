@@ -642,6 +642,10 @@ async function main() {
   const quotesDest = path.join(refDir, 'capex-quotes.json');
   if (fs.existsSync(quotesSrc)) fs.copyFileSync(quotesSrc, quotesDest);
 
+  const guideSrc = path.join(__dirname, 'templates', 'PACKAGE_GUIDE.md');
+  const guideDest = path.join(refDir, 'PACKAGE_GUIDE.md');
+  if (fs.existsSync(guideSrc)) fs.copyFileSync(guideSrc, guideDest);
+
   const manifest = {
     package: 'loan',
     stage: 'Revised',
@@ -666,6 +670,7 @@ async function main() {
       'schedule-d-risks': 'documents/Key_Risks_Schedule_D.pdf',
       'changes-memo': 'documents/Changes_Memo.pdf',
       'capex-quotes': 'reference/capex-quotes.json',
+      'package-guide': 'reference/PACKAGE_GUIDE.md',
     },
   };
   fs.writeFileSync(path.join(refDir, 'manifest.json'), JSON.stringify(manifest, null, 2) + '\n', 'utf8');
