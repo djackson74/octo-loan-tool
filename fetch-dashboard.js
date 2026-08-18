@@ -15,7 +15,7 @@
 // this module for a Playwright-based scraper (the public interface below —
 // fetchDashboardData() returning the same shape — would not need to change).
 
-const BASE_URL = 'https://octo-dashboard-rikj.onrender.com';
+const BASE_URL = 'https://octo-dashboard-forge.onrender.com';
 const LOG_PATH = require('path').join(__dirname, 'data', 'dashboard-log.jsonl');
 const fs = require('fs');
 

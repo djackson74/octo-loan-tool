@@ -1,8 +1,10 @@
 # Cover Letter — Senior Secured Term Loan (Discussion Draft)
 
-**Date:** 2026-07-06  
-**From:** GrnBit (Cayman) Holdings · Miracle Lake TX Phase 1  
-**To:** Prospective senior lender / participation syndicate  
+**Date:** 2026-08-18  
+**From:** GrnBit Cayman Holdings  
+**Address:** One Capital Place, Grand Cayman, Cayman Islands  
+**Project:** Miracle Lake, Karnes County, South Texas — Phase 1  
+**To:** Prospective senior lender / participation syndicate
 **Re:** Indicative $3,000,000 senior secured term loan facility — balloon structure  
 **Status:** Non-binding · for discussion with counsel only
 
@@ -10,11 +12,11 @@
 
 Dear Lender,
 
-GrnBit (Cayman) Holdings ("**Borrower**") requests your consideration of a senior secured term loan to fund energisation and OCTO AI validation at **Miracle Lake, Karnes County, Texas — Phase 1**.
+GrnBit Cayman Holdings ("**Borrower**") requests your consideration of a senior secured term loan to fund energisation and OCTO AI validation at **Miracle Lake, Karnes County, South Texas — Phase 1** (power: Xplor Energy / Karnes Electric).
 
 ### Why this letter
 
-We are not asking you to rely on a static deck. Coverage metrics in the enclosed term sheet are sized from the **live OCTO AI dashboard simulation** pulled 2026-07-06T19:59:10.334Z:
+We are not asking you to rely on a static deck. Coverage metrics in the enclosed term sheet are sized from the **live OCTO AI dashboard simulation** pulled 2026-08-18T19:39:46.725Z:
 
 - OCTO daily profit (optimized twin): **$2,387/day**
 - OCTO edge vs industry-typical baseline: **+22.6%**
@@ -22,7 +24,7 @@ We are not asking you to rely on a static deck. Coverage metrics in the enclosed
 - Validation status: **simulation-validated**
 
 The dashboard is the same surface we use for investor diligence:  
-https://octo-dashboard-rikj.onrender.com/
+https://octo-dashboard-forge.onrender.com/
 
 ### Why balloon — not full 48-month amortization
 
@@ -51,9 +53,11 @@ Minimum lender participation: **$250,000**. Multiple lenders may participate pro
 - CAPEX build-out sizing uses **locked vendor quotes** (AntSpace/Bitmain hardware + Xplor interconnect) in `capex-quotes.json`, reconciled to **$3.02M** Phase 1 total.
 - This package is **not an offer of securities** and **not legal or tax advice**.
 
-We welcome a diligence call and site scoping session. Contact: **info@grnbit.digital**.
+We welcome a diligence call and site scoping session. Contact: **djackson@grnbit.digital**.
 
 Respectfully,
 
-**GrnBit (Cayman) Holdings**  
-Miracle Lake TX Phase 1 · OCTO AI Validation Site
+**GrnBit Cayman Holdings**  
+One Capital Place, Grand Cayman, Cayman Islands  
+Project: Miracle Lake, Karnes County, South Texas — Phase 1  
+djackson@grnbit.digital · https://grnbit.digital

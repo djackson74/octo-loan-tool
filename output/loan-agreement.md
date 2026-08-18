@@ -2,8 +2,9 @@
 
 **WARNING:** Form only. GrnBit counsel must review before execution. Non-binding template.
 
-**Date:** 2026-07-06  
-**Parties:** GrnBit (Cayman) Holdings ("Borrower") · [Lender Name] ("Lender")
+**Date:** 2026-08-18  
+**Parties:** GrnBit Cayman Holdings ("Borrower") · [Lender Name] ("Lender")  
+**Borrower address:** One Capital Place, Grand Cayman, Cayman Islands
 
 ---
 
@@ -38,7 +39,7 @@ Key definitions include: **Business Day**, **DSCR**, **Drawdown Date**, **Facili
 
 **Maturity (month 48):** payment in full of **Balloon Payment** (remaining principal).
 
-See Schedule A for tranche-specific dollar amounts derived from simulation as of 2026-07-06T19:59:10.334Z.
+See Schedule A for tranche-specific dollar amounts derived from simulation as of 2026-08-18T19:39:46.725Z.
 
 ### $2,000,000 tranche
 
@@ -91,7 +92,7 @@ Governing law: [Cayman / Texas — counsel to confirm]. Forum: [●]. Notices. A
 
 ---
 
-## Schedule A — Payment amounts (simulation-sized · 2026-07-06T19:59:10.334Z)
+## Schedule A — Payment amounts (simulation-sized · 2026-08-18T19:39:46.725Z)
 
 ### $2,000,000 tranche
 
@@ -118,7 +119,7 @@ Governing law: [Cayman / Texas — counsel to confirm]. Forum: [●]. Notices. A
 
 ## Schedule B — Simulation disclosure
 
-- Dashboard source: https://octo-dashboard-rikj.onrender.com/  
+- Dashboard source: https://octo-dashboard-forge.onrender.com/  
 - OCTO daily profit at pull: $2,387  
 - BTC: $63,581 · Edge: +22.6%  
 - Validation: simulation-validated  

@@ -3,7 +3,7 @@
 **Project:** Miracle Lake, Karnes County, South Texas — Phase 1
 **Model:** OCTO-optimized digital-twin simulation  
 **Timestamp:** 2026-07-06T19:53:22.251Z  
-**Dashboard:** https://octo-dashboard-rikj.onrender.com/  
+**Dashboard:** https://octo-dashboard-forge.onrender.com/  
 **Status:** simulation-validated — live certification begins at Phase 1 energisation
 
 ---

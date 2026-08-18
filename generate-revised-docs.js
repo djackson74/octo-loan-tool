@@ -11,7 +11,7 @@ const GRNBIT = require('./grnbit-brand');
 const SIM_TS = '2026-07-06T19:53:22.251Z';
 const DOC_DATE = '2026-07-06';
 const HEADER_LABEL = 'Discussion Draft — Revised 2026-07-06';
-const DASHBOARD_URL = 'https://octo-dashboard-rikj.onrender.com/';
+const DASHBOARD_URL = 'https://octo-dashboard-forge.onrender.com/';
 
 const FROZEN = {
   dailyProfit: 2387,

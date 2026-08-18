@@ -12,7 +12,7 @@
 
 Key definitions include: **Business Day**, **DSCR**, **Drawdown Date**, **Facility Amount**, **Interest Period**, **Maturity Date**, **OCTO Validation Milestone**, **OCTO-Optimized Digital-Twin Simulation**, **Industry-Typical Baseline**, **Project Assets**, **Scheduled Payment**, **Balloon Payment**.
 
-**OCTO-Optimized Digital-Twin Simulation** means the Miracle Lake TX Phase 1 economics model run as of **2026-07-06T19:53:22.251Z**, accessible at https://octo-dashboard-rikj.onrender.com/
+**OCTO-Optimized Digital-Twin Simulation** means the Miracle Lake TX Phase 1 economics model run as of **2026-07-06T19:53:22.251Z**, accessible at https://octo-dashboard-forge.onrender.com/
 
 **Industry-Typical Baseline** means rig-level SCADA without OCTO per-chip thermal co-control, modeled at 87.9% hashrate utilization; **Edge vs baseline** is the simulated daily-profit uplift of the OCTO-optimized scenario over that baseline.
 
@@ -131,7 +131,7 @@ Amendments in writing. Counterparts / e-sign.
 
 | Item | Value | Source |
 |------|-------|--------|
-| Dashboard | https://octo-dashboard-rikj.onrender.com/ | Public diligence surface |
+| Dashboard | https://octo-dashboard-forge.onrender.com/ | Public diligence surface |
 | Simulation timestamp | 2026-07-06T19:53:22.251Z | Twin pull used to size payments |
 | OCTO-optimized daily profit | $2,387 | Digital-twin optimized scenario |
 | BTC price | $63,581 | Model input at pull |

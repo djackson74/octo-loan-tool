@@ -81,7 +81,7 @@ We are not asking you to rely on a static deck. Coverage metrics in the enclosed
 - Validation status: **${ctx.validation}**
 
 The dashboard is the same surface we use for investor diligence:  
-https://octo-dashboard-rikj.onrender.com/
+https://octo-dashboard-forge.onrender.com/
 
 ### Why balloon — not full 48-month amortization
 
@@ -293,7 +293,7 @@ ${ctx.tierBlocks}
 
 ## Schedule B — Simulation disclosure
 
-- Dashboard source: https://octo-dashboard-rikj.onrender.com/  
+- Dashboard source: https://octo-dashboard-forge.onrender.com/  
 - OCTO daily profit at pull: ${usd(ctx.dailyProfit)}  
 - BTC: ${usd(ctx.btc)} · Edge: +${ctx.edgePct}%  
 - Validation: ${ctx.validation}  

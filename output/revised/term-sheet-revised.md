@@ -30,7 +30,7 @@
 
 **Industry-typical baseline** means rig-level SCADA without OCTO per-chip thermal co-control, modeled at **87.9% hashrate utilization** (within CleanSpark Feb 2026 operating/peak range); **Edge vs baseline** is the simulated daily-profit uplift of the OCTO-optimized digital-twin scenario over that unoptimized baseline.
 
-**Dashboard:** https://octo-dashboard-rikj.onrender.com/  
+**Dashboard:** https://octo-dashboard-forge.onrender.com/  
 **Full model:** Available in data room (Simulation Assumptions Schedule).
 
 ## 3. Commercial terms (fixed)

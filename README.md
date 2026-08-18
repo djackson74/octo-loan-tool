@@ -2,7 +2,7 @@
 
 Generates a defensible $1.0M–$3.0M senior secured term loan repayment
 schedule using **live** simulation data from the OCTO AI dashboard
-(https://octo-dashboard-rikj.onrender.com/), instead of assumed profit
+(https://octo-dashboard-forge.onrender.com/), instead of assumed profit
 figures.
 
 ## What it does

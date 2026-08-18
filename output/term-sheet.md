@@ -1,8 +1,9 @@
 # Indicative Term Sheet — Senior Secured Term Loan (Balloon)
 
-**Borrower:** GrnBit (Cayman) Holdings  
-**Project:** Miracle Lake TX Phase 1 — OCTO AI industrial optimization validation site  
-**Date:** 2026-07-06  
+**Borrower:** GrnBit Cayman Holdings  
+**Registered office:** One Capital Place, Grand Cayman, Cayman Islands  
+**Project:** Miracle Lake, Karnes County, South Texas — Phase 1 — OCTO AI industrial optimization validation site
+**Date:** 2026-08-18  
 **Status:** Non-binding · discussion draft only · subject to counsel and credit approval
 
 ---
@@ -18,7 +19,7 @@
 | **Currency** | USD |
 | **Purpose** | Phase 1 capex: containers, miners, interconnect, energisation, OCTO deployment |
 
-## 2. Economics (live simulation inputs — 2026-07-06T19:59:10.334Z)
+## 2. Economics (live simulation inputs — 2026-08-18T19:39:46.725Z)
 
 | Input | Value |
 |-------|-------|
@@ -66,7 +67,7 @@
 - First-priority security interest in Miracle Lake Phase 1 equipment (containers, miners, PDUs, cooling).  
 - Assignment of power purchase / interconnect agreements where assignable.  
 - OCTO field-of-use license collateral assignment (scope per definitive docs).  
-- Corporate guarantee of GrnBit (Cayman) Holdings.  
+- Corporate guarantee of GrnBit Cayman Holdings.
 - Senior to equity, SAFE, and convertible notes.
 
 ## 5. Covenants (indicative)
@@ -110,4 +111,4 @@ Not an offer of securities. Not legal, tax, or investment advice. OCTO metrics a
 
 ---
 
-**Contact:** info@grnbit.digital · https://grnbit.digital
+**Contact:** djackson@grnbit.digital · https://grnbit.digital

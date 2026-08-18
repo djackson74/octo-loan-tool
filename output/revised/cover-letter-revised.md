@@ -16,7 +16,7 @@ GrnBit Cayman Holdings ("**Borrower**") requests your consideration of a senior 
 
 ### Substantiation — simulation source and traceability
 
-We are not asking you to rely on a static deck. Coverage metrics in the enclosed term sheet are sized from the **OCTO-optimized digital-twin simulation** as of **2026-07-06T19:53:22.251Z** — the same model surface used for investor diligence at https://octo-dashboard-rikj.onrender.com/
+We are not asking you to rely on a static deck. Coverage metrics in the enclosed term sheet are sized from the **OCTO-optimized digital-twin simulation** as of **2026-07-06T19:53:22.251Z** — the same model surface used for investor diligence at https://octo-dashboard-forge.onrender.com/
 
 At that pull:
 
